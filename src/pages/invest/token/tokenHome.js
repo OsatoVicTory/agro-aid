@@ -18,15 +18,22 @@ const TokenHome = () => {
     const navigate = useNavigate();
     const token = {
         date: String(new Date()),
-        name: 'Ijaiye'
+        name: token_id == '1' ? 'Ijaiye' : 'Alabi'
     }
     // console.log(account.address)
 
-    const lists = Array(5).fill({
-        name: 'Ijaiye coin', max_supply: '250,000,000', object_id: '0k3f2c...8df306',
-        date_created: String(new Date()), img: image,
-        desc: 'USDT (Tether) is a stablecoin pegged to the U.S. Dollar, designed to maintain a 1:1 value ratio with USD. It offers the benefits of cryptocurrency while avoiding volatility, making it popular for trading and as a store of value.'
-    });
+    const lists = [
+        {
+            name: 'Ijaiye coin', max_supply: '250,000,000', object_id: '0k3f2c...8df306',
+            date_created: String(new Date()), img: image,
+            desc: 'USDT (Tether) is a stablecoin pegged to the U.S. Dollar, designed to maintain a 1:1 value ratio with USD. It offers the benefits of cryptocurrency while avoiding volatility, making it popular for trading and as a store of value.'
+        },
+        {
+            name: 'Ojo coin', max_supply: '150,000,000', object_id: '0y3q6c...7qfjo1',
+            date_created: String(new Date('29 Nov 2024')), img: image,
+            desc: 'USDT (Tether) is a stablecoin pegged to the U.S. Dollar, designed to maintain a 1:1 value ratio with USD. It offers the benefits of cryptocurrency while avoiding volatility, making it popular for trading and as a store of value.'
+        }
+    ];
 
     const getDate = useMemo(() => {
         return String(token.date).slice(0, 15);
@@ -49,7 +56,7 @@ const TokenHome = () => {
                 <div className={`tkh ${routes==='about'}`}>
                     <div className='tkh_'>
                         <IoIosArrowBack className='tkh-icon pointer' />
-                        <h3>Ijaiye token</h3>
+                        <h3>{token_id=='1'?'Ijaiye':'Alabi'} token</h3>
                     </div>
                     <div className='tkh-header'>
                         <div className='tkh-image'></div>
@@ -75,7 +82,7 @@ const TokenHome = () => {
                         <div className='tkd'>
                             <span className='tkd-name'>Maximum supply</span>
                             <div className='tkd-value'>
-                                <span>250,000,000<span className='tk-symbol'>IJY</span></span>
+                                <span>10,000,000<span className='tk-symbol'>IJY</span></span>
                             </div>
                         </div>
                         <div className='tkd'>

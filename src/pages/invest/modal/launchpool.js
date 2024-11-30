@@ -110,15 +110,15 @@ const LaunchPool = ({ closeModal }) => {
                             <div className="lpm">
                                 <div>
                                     <span className="lpm-name">Total price pool</span>
-                                    <span className="lpm-value">1,000,000</span>
+                                    <span className="lpm-value">100,000</span>
                                 </div>
                                 <div>
                                     <span className="lpm-name">Total participants</span>
-                                    <span className="lpm-value">200,000</span>
+                                    <span className="lpm-value">2</span>
                                 </div>
                                 <div>
                                     <span className="lpm-name">Total projects</span>
-                                    <span className="lpm-value">10</span>
+                                    <span className="lpm-value">1</span>
                                 </div>
                             </div>
                             <div className='am-li'>
@@ -134,7 +134,7 @@ const LaunchPool = ({ closeModal }) => {
                                     </div>
                                     <div className='amld'>
                                         <span className='amld-name'>Recepient</span>
-                                        <span className='amld-value'>John Doe</span>
+                                        <span className='amld-value'>Osato.shi</span>
                                     </div>
                                     <div className='amld'>
                                         <span className='amld-name'>Recepient ID</span>

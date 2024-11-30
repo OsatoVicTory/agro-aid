@@ -4,7 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { AiOutlineSearch } from 'react-icons/ai';
 import './styles.css';
 import { formatDate, getPeriod } from '../../../util';
-// import image from '../../../images/community.jpg';
+import image2 from '../../../images/community.jpg';
 import image from '../../../images/banner.jpg';
 import { useEffect, useState } from 'react';
 import InvestHomeLoading from './loading';
@@ -18,16 +18,24 @@ const InvestHome = () => {
 
 	const account = useCurrentAccount();
     // console.log(account.address)
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [data, setData] = useState({});
-    const [lists, setLists] = useState([]);
+    // const [lists, setLists] = useState([]);
     const navigate = useNavigate();
 
-    // const lists = Array(5).fill({
-    //     name: 'Ijaiye coin', max_supply: '250,000,000', object_id: '0k3f2c...8df306',
-    //     date_created: String(new Date()), img: image,
-    //     desc: 'USDT (Tether) is a stablecoin pegged to the U.S. Dollar, designed to maintain a 1:1 value ratio with USD. It offers the benefits of cryptocurrency while avoiding volatility, making it popular for trading and as a store of value.'
-    // });
+    const lists = [
+        {
+            name: 'Ijaiye coin', max_supply: '250,000,000', object_id: '0k3f2c...8df306',
+            date_created: String(new Date()), img: image,
+            // desc: 'USDT (Tether) is a stablecoin pegged to the U.S. Dollar, designed to maintain a 1:1 value ratio with USD. It offers the benefits of cryptocurrency while avoiding volatility, making it popular for trading and as a store of value.'
+        },
+        {
+            name: 'Alabi coin', max_supply: '150,000,000', object_id: '0ty12c...84ff306',
+            date_created: String(new Date('29 Nov 2024')), img: image2,
+            // desc: 'USDT (Tether) is a stablecoin pegged to the U.S. Dollar, designed to maintain a 1:1 value ratio with USD. It offers the benefits of cryptocurrency while avoiding volatility, making it popular for trading and as a store of value.'
+          
+        }
+    ];
 
     const rpcurl = getFullnodeUrl("testnet");
     const client = new SuiClient({ url: rpcurl });
@@ -78,7 +86,7 @@ const InvestHome = () => {
     }
 
     useEffect(() => {
-        handleFetchCommunity();
+        // handleFetchCommunity();
     }, []);
 
     return (

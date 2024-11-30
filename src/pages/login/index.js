@@ -2,11 +2,20 @@
 import { useCurrentAccount } from '@mysten/dapp-kit';
 import './styles.css';
 import WalletButton from '../../component/button';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
 	const account = useCurrentAccount();
+    const navigate = useNavigate();
     // console.log(account.address)
+
+    useEffect(() => {
+        if(account?.address) {
+            navigate('/app/invest');
+        }
+    }, [account?.address]);
 
     return (
         <div className="login">

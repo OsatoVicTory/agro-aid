@@ -12,7 +12,7 @@ const Asset = () => {
 	const account = useCurrentAccount();
     // console.log(account.address)
 
-    const assetDocuments = Array(5).fill(0);
+    const assetDocuments = Array(1).fill(0);
     const [modal, setModal] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -44,7 +44,7 @@ const Asset = () => {
                                     </div>
                                     <div className='amld'>
                                         <span className='amld-name'>Recepient</span>
-                                        <span className='amld-value'>John Doe</span>
+                                        <span className='amld-value'>Osato.shi</span>
                                     </div>
                                     <div className='amld'>
                                         <span className='amld-name'>Recepient ID</span>
